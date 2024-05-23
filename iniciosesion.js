@@ -1,37 +1,37 @@
 const formula = document.querySelector('form');
-const correo = document.getElementById("campoemail").value;
-const passwd = document.getElementById("campopwd").value;
 
-let correovalid;
-if (correo ==='') {
-    correovalid = false;
-} else {
-    correovalid = true;
-}
-
-let passwdvalid;
-if (correo ==='') {
-    passwdvalid = false;
-} else {
-    passwdvalid = true;
-}
 formula.addEventListener('submit', NoEnviar)
 
 function NoEnviar(event) {
-    if (!correovalid) {
+    if (validarcampos()) {
         event.preventDefault(); 
-        alert("email vacio");
+        document.getElementById("advierte").textContent="Alguna credencial vacía";
+        Swal.fire({
+            title: "Bienvenido!",
+            text: "Olvidaste tu susario o contraseña?",
+            timer: 2000 ,
+            icon: "error"
+          }); 
     }else{
-        alert("email joya");
-    }
-
-    if (!passwdvalid) {
-        event.preventDefault(); 
-        alert("password vacio");
-    }else{
-        alert("password joya");
-    }
+        document.getElementById("advierte").textContent="Credenciales correctas";
+        Swal.fire({
+            title: "Bienvenido!",
+            text: "Ahora entrarás a tu espacio de compras",
+            timer: 5000 ,
+            icon: "success"
+          }); 
+         // alert("ssf")
+    }  
    }
 
+function validarcampos() {
+let correo = document.getElementById("campoemail").value;
+let passwd = document.getElementById("campopwd").value;
+console.log (correo, passwd);
+if (correo ==='' || passwd === '') {
+    return true;
+} else {
+    return false;
+}
+}
 
-console.log (correovalid, passwdvalid);

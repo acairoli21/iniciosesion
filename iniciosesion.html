@@ -14,6 +14,8 @@
 <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
 </head>
 
@@ -23,11 +25,14 @@
     <section class="formu">
       <div class="titulosecc2">
         <p>Iniciar Sesión</p>
-        <form action="">
+        <form method="get" action="#">
+          <fieldset>
           <input id="campoemail" class="input_buscar" type="text" placeholder="Email" /><br>
-          <input id="campopwd" class="input_buscar" type="password" placeholder="Contraseña" /><br><br>
+          <input id="campopwd" class="input_buscar" type="password" placeholder="Contraseña" /><br>
+          <label id="advierte"></label><br>
           <input class="btn_buscar" type="submit" value="Iniciar Sesión" /><br>
           <a id="regis" href="">Registrarse</a>
+        </fieldset>
         </form>
       </div>
     </section>

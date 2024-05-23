@@ -171,6 +171,10 @@ nav {
     text-align: left;
     font-size: small;
   }
+  #advierte {
+    font-size: large;
+    color: red;
+  }
   .cajas {
     width: 100%;
   height: auto;
