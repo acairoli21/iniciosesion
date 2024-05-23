@@ -7,9 +7,9 @@ function NoEnviar(event) {
         event.preventDefault(); 
         document.getElementById("advierte").textContent="Alguna credencial vacía";
         Swal.fire({
-            title: "Bienvenido!",
+            title: "Uppss",
             text: "Olvidaste tu susario o contraseña?",
-            timer: 2000 ,
+            timer: 5000 ,
             icon: "error"
           }); 
     }else{
